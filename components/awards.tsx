@@ -1,6 +1,7 @@
-import { Award } from "lucide-react";
+import { Award, SquareArrowOutUpRight } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/card";
 import { config } from "@/lib/core";
+import Link from "next/link";
 
 export default function Awards() {
   return (
@@ -18,8 +19,10 @@ export default function Awards() {
               {config.awards.map((award, index) => (
                 <Card key={index}>
                   <CardHeader className="flex flex-row items-center gap-4">
-                    <Award className="h-8 w-8 text-yellow-500" />
-                    <CardTitle>{award.title}</CardTitle>
+                    <Link className="flex items-center justify-center space-x-3" href={award.link} target="_blank">
+                      <Award className="h-8 w-8 text-yellow-500" />
+                      <CardTitle className="flex">{award.title}&nbsp;<SquareArrowOutUpRight className="size-4 ml-2" /></CardTitle>
+                    </Link>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">{award.desc}</p>
