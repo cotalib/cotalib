@@ -10,25 +10,25 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Cotalib. All rights reserved.
         </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4">
+          {/* <Link href="#" className="text-xs hover:underline underline-offset-4">
             Privacy Policy
           </Link>
           <Link href="#" className="text-xs hover:underline underline-offset-4">
             Terms of Service
-          </Link>
+          </Link> */}
           <div className="flex gap-3 ml-4">
-            <Link href={config.socials.facebook} aria-label="Facebook">
+            {/* {config.socials.facebook && <Link href={config.socials.facebook} aria-label="Facebook">
               <Facebook className="h-5 w-5 text-muted-foreground hover:text-foreground" />
-            </Link>
-            <Link href={config.socials.twitter} aria-label="Twitter">
+            </Link>}
+            {config.socials.x && <Link href={config.socials.x} aria-label="Twitter">
               <Twitter className="h-5 w-5 text-muted-foreground hover:text-foreground" />
-            </Link>
-            <Link href={config.socials.instagram} aria-label="Instagram">
+            </Link>}
+            {config.socials.x && <Link href={config.socials.instagram} aria-label="Instagram">
               <Instagram className="h-5 w-5 text-muted-foreground hover:text-foreground" />
-            </Link>
-            <Link href={config.socials.linkedin} aria-label="LinkedIn">
-              <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground" />
-            </Link>
+            </Link>} */}
+            {config.socials.linkedin && <Link href={config.socials.linkedin} aria-label="LinkedIn">
+              <Linkedin className="h-full w-full text-muted-foreground hover:text-foreground" />
+            </Link>}
             <ThemeToggler />
           </div>
         </nav>
