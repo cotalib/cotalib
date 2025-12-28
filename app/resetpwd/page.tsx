@@ -123,7 +123,8 @@ export default function ResetPassword() {
       return;
     }
 
-    alert(`Code de réinitialisation envoyé à ${email}`);
+    alert('Code de réinitialisation envoyé à votre adresse email');
+
     setStep(2);
   };
 
